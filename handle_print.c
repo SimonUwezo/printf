@@ -4,11 +4,11 @@
  * @fmt: Formatted string.
  * @list: List of arguments.
  * @ind: The ind
- * @buffer: Buffer array.
- * @flags: Active flags
- * @width: The width.
- * @precision: Precision specifier
- * @size: Size specification
+ * @buffer: temporary storage.
+ * @flags: boolean variable
+ * @width: integer btw % and d
+ * @precision: realness of number
+ * @size: Sizeof
  * Return: Success
  */
 int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
