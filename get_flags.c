@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * get_flags - The active flags
+ * get_flags - The boolean variable flags
  * @format: Formatted string in which to print the args
- * @i: The parameter.
- * Return: Flags
+ * @i: The variable
+ * Return: Flags printed
  */
 int get_flags(const char *format, int *i)
 {
