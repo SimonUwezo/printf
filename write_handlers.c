@@ -4,13 +4,13 @@
 /**
  * handle_write_char - writes a string
  * @c: character types.
- * @buffer: array for the print
- * @flags:  No of active flags.
- * @width: get width.
- * @precision: specifies precision
- * @size: The Size
+ * @buffer: temporary storage
+ * @flags: boolean variable.
+ * @width: integer btw % d
+ * @precision: realness
+ * @size: The Sizeof
  *
- * Return: No of chars written.
+ * Return: No written.
  */
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
@@ -44,18 +44,18 @@ int handle_write_char(char c, char buffer[],
 	return (write(1, &buffer[0], 1));
 }
 
-/************************* WRITE NUMBER *************************/
+/************* Wrinting numbers *************************/
 /**
  * write_number - writes a string
  * @is_negative: Shows negative num
  * @ind: character types.
- * @buffer: Buffer array
- * @flags:  No of active flags
- * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
+ * @buffer: temporary storage
+ * @flags: boolean variable
+ * @width: integer btw % n d
+ * @precision: realness of number
+ * @size: Sizeof
  *
- * Return: No of chars written
+ * Return: No of written numbers
  */
 int write_number(int is_negative, int ind, char buffer[],
 	int flags, int width, int precision, int size)
@@ -81,10 +81,10 @@ int write_number(int is_negative, int ind, char buffer[],
 /**
  * write_num - prints a number using a bufffer
  * @ind: Where the number starts on the buffer
- * @buffer: The buffer
- * @flags: The Flags
- * @width: The width
- * @prec: specifies precision
+ * @buffer: temporary storage
+ * @flags: boolean variable
+ * @width: % integer
+ * @prec: specifer
  * @length: Length of the num
  * @padd: Padding character
  * @extra_c: Extra character
@@ -141,11 +141,11 @@ int write_num(int ind, char buffer[],
  * write_unsgnd - prints an unsigned char
  * @is_negative: char indicating negative number
  * @ind: where it starts in the buffer
- * @buffer: Array of chars
- * @flags: Flags specifier
+ * @buffer: temporary storage
+ * @flags: boolean variable
  * @width: Width specifiers
- * @precision: Precision specifier
- * @size: Size specifier
+ * @precision: realness of nu
+ * @size: Sizeof
  *
  * Return: No of printed chars.
  */
@@ -194,10 +194,9 @@ int write_unsgnd(int is_negative, int ind,
 
 	return (write(1, &buffer[ind], length));
 }
-
 /**
  * write_pointer - pointer that prints a memory address
- * @buffer: Arrays of characters
+ * @buffer: temporary storage
  * @ind: The index at which the number starts
  * @length: Number length
  * @width: Width specifier
@@ -206,7 +205,7 @@ int write_unsgnd(int is_negative, int ind,
  * @extra_c: number representing extra character
  * @padd_start: The index at which padding starts
  *
- * Return: No of printed characters.
+ * Return: No of printed padding
  */
 int write_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start)
